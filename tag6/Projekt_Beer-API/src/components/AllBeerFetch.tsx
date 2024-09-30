@@ -19,14 +19,10 @@ export function AllBeer() {
     <article>
       <div className="start">
         <div className="image-box">
-          <img
-            src={beers.map((beer) => beer.image_url[0])}
-            alt="beer"
-            className="image"
-          />
+          <img src={beers[0].image_url} alt="beer" className="image" />
           <button onClick={fetchAllBeer}>All Beer</button>
           <p>
-            <b>Beer Beer Songtext von Korpiklaani</b>
+            <b>Beer Beer Songtext von Korpiklaani </b>
             From evening to morning, And morning to evening, I wanna drink,
             Something stronger than a man, From evening to morning, And morning
             to evening, I wanna drink, Cause that′s what I am! Beer, beer! I
