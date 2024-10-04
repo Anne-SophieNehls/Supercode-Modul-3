@@ -1,0 +1,61 @@
+:root {
+background-color: whitesmoke;
+}
+
+button {
+  border-radius: 8px;
+  border: 0px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #fac744;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#output {
+  margin: 0 auto;
+  width: 90vw;
+}
+.image-box {
+  margin: 10px 0;
+
+  display: flex;
+  flex-direction: column;
+}
+.image {
+  object-fit: cover;
+
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: #b58711;
+}
+.beer-card {
+  height: 30vh;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 8px 0;
+  border-top: 2px solid black;
+  /* border-bottom: 2px solid black; */
+  margin: 5px 0;
+}
+
+.beer-details {
+  margin-left: 20%;
+}
+
+.product-image {
+  height: 95%;
+}
+
+h3 {
+  color: #f8bc24;
+}
