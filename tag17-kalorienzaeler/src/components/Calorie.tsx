@@ -7,6 +7,32 @@ export default function Calorie() {
   const [gender, setGender] = useState(true);
   const [activity, setActivity] = useState(0);
 
+  const [calBase, setCalBase] = useState(0);
+  const [calWithActiv, seCalWithActiv] = useState(0);
+
+  function calculateCaloriesFemale() {
+    const calBase = 66.47 + 13.7 * weight + 5 * bodySize - 6.8 * age;
+    setCalBase(calBase);
+    const calWithActiv = calBase * activity;
+    seCalWithActiv(calWithActiv);
+  }
+
+  function calculateCaloriesMale() {
+    const calBase = 655.1 + 9.6 * weight + 1.8 * bodySize - 4.7 * age;
+    setCalBase(calBase);
+    const calWithActiv = calBase * activity;
+    seCalWithActiv(calWithActiv);
+  }
+
+  function handleSubmit(e: Event) {
+    e.preventDefault();
+    if (!gender) {
+      calculateCaloriesMale();
+    } else {
+      calculateCaloriesFemale;
+    }
+  }
+
   return (
     <section>
       <div>
@@ -17,22 +43,38 @@ export default function Calorie() {
           information to calculate your individual requirements.
         </p>
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="bodySize">Body size (in cm)</label>
-          <input type="number" id="bodySize" />
+          <input
+            type="number"
+            id="bodySize"
+            onChange={(e) => setBodySize(Number(e.target.value))}
+          />
         </div>
         <div>
-          <label htmlFor="age">Age</label>
-          <input type="number" id="age" />
+          <label htmlFor="age">Age in years</label>
+          <input
+            type="number"
+            id="age"
+            onChange={(e) => setAge(Number(e.target.value))}
+          />
         </div>
         <div>
-          <label htmlFor="weight"></label>
-          <input type="number" id="weight" />
+          <label htmlFor="weight">weight in kg</label>
+          <input
+            type="number"
+            id="weight"
+            onChange={(e) => setWeight(Number(e.target.value))}
+          />
         </div>
         <div>
           <label htmlFor="gender">Gender</label>
-          <select name="gender" id="gender">
+          <select
+            name="gender"
+            id="gender"
+            onChange={(e) => setGender(Boolean(e.target.value))}
+          >
             <option value="none">chooseGender</option>
             <option value="true">female</option>
             <option value="false">male</option>
@@ -40,16 +82,20 @@ export default function Calorie() {
         </div>
         <div>
           <label htmlFor="Activity">Activity</label>
-          <select name="Activity" id="Activity">
+          <select
+            name="Activity"
+            id="Activity"
+            onChange={(e) => setActivity(Number(e.target.value))}
+          >
             <option value="0">
               Exclusively sedentary work with little or no physical activity in
               leisure time
             </option>
-            <option value="1">one or two times per week</option>
-            <option value="2">three times per week</option>
-            <option value="3">four times per week</option>
-            <option value="4">five or six times per week</option>
-            <option value="5">every day ist an action day</option>
+            <option value="1.2">one or two times per week</option>
+            <option value="1.5">three times per week</option>
+            <option value="1.7">four times per week</option>
+            <option value="1.9">five or six times per week</option>
+            <option value="2.2">every day ist an action day</option>
           </select>
         </div>
         <button>Calculate</button>
@@ -62,12 +108,12 @@ export default function Calorie() {
           </tr>
           <tr>
             <td>Basal Metabolic Rate</td>
-            <td>{/* baseKcal */}</td>
+            <td>{`${calBase}`} kcal</td>
             <td>{/* baseKj */}</td>
           </tr>
           <tr>
             <td>Total Daily Energy Expenditure</td>
-            <td>{/* expenditureKcal */}</td>
+            <td>{`${calWithActiv}`} kcal</td>
             <td>{/* expenditureKcal */}</td>
           </tr>
         </table>
