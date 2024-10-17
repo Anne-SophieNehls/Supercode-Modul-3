@@ -25,7 +25,7 @@ function randomFromTo(from, to) {
   return Math.floor(Math.random() * (to - from + 1) + from);
 }
 
-function confettiParticle() {
+export function confettiParticle() {
   this.x = Math.random() * W; // x
   this.y = Math.random() * H - H; // y
   this.r = randomFromTo(11, 33); // radius
@@ -46,7 +46,7 @@ function confettiParticle() {
   };
 }
 
-function Draw() {
+export function Draw() {
   const results = [];
 
   // Magical recursive functional love

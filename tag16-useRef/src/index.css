@@ -29,6 +29,17 @@ button:hover {
   border-color: #646cff;
 }
 
+h1{
+  text-align: center;
+  margin: 30px;
+}
+
+/* ------ formular style ---------- */
+
+form{
+  height: 70svh;
+  width: 70svw;
+}
 
 /* ######## Konfetti animation ######## */
 
