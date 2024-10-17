@@ -11,12 +11,12 @@ export default function Blog() {
       </div>
       <section className="blog-input">
         <a href="#">
-          <img src="" alt="" />
+          <img src="./src/img/blog1.png" alt="" />
           <p></p>
           <h3></h3>
           <p></p>
           <section>
-            <img src="" alt="" />
+            <img src="./src/img/blogger1.png" alt="" />
             <article>
               <p></p>
               <p></p>
@@ -28,12 +28,12 @@ export default function Blog() {
           </section>
         </a>
         <a href="#">
-          <img src="" alt="" />
+          <img src="./src/img/blog2.png" alt="" />
           <p></p>
           <h3></h3>
           <p></p>
           <section>
-            <img src="" alt="" />
+            <img src="./src/img/blogger2.png" alt="" />
             <article>
               <p></p>
               <p></p>

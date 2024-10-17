@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <img src="" alt="logo" />
+      <img src="./src/img/Logo.png" alt="logo" />
       <nav>
         <a href="#">Home</a>
         <a href="#">About</a>

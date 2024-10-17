@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <div>
-      <img src="" alt="Hero-Image_sporty_woman" />
+      <img src="./src/img/hero-img.png" alt="Hero-Image_sporty_woman" />
       <section>
         <h3>Transorm Your 💚 Health with</h3>
         <h1>Personaliued Nutrition Coaching</h1>
@@ -17,7 +17,11 @@ export default function Hero() {
           <button>Book a Demo</button>
         </div>
         <div>
-          <img src="" alt="" />
+          <div className="more-customers__container">
+            <img src="./src/img/more-people.png" alt="" />
+            <img src="./src/img/more-people2.png" alt="" />
+            <img src="./src/img/more-people3.png" alt="" />
+          </div>
           <p>
             <span>430+ </span>Happy Customers
           </p>
