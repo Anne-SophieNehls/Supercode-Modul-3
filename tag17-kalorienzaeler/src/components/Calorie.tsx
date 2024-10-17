@@ -12,16 +12,15 @@ export default function Calorie() {
 
   function calculateCaloriesFemale() {
     const calBase = 66.47 + 13.7 * weight + 5 * bodySize - 6.8 * age;
-    setCalBase(calBase);
     const calWithActiv = calBase * activity;
+    setCalBase(calBase);
     seCalWithActiv(calWithActiv);
   }
 
   function calculateCaloriesMale() {
     const calBase = 655.1 + 9.6 * weight + 1.8 * bodySize - 4.7 * age;
-    setCalBase(calBase);
-    debugger;
     const calWithActiv = calBase * activity;
+    setCalBase(calBase);
     seCalWithActiv(calWithActiv);
   }
 
@@ -88,11 +87,11 @@ export default function Calorie() {
             id="Activity"
             onChange={(e) => setActivity(Number(e.target.value))}
           >
-            <option value="0">
+            <option value="1.2">
               Exclusively sedentary work with little or no physical activity in
               leisure time
             </option>
-            <option value="1.2">one or two times per week</option>
+            <option value="1.35">one or two times per week</option>
             <option value="1.5">three times per week</option>
             <option value="1.7">four times per week</option>
             <option value="1.9">five or six times per week</option>
