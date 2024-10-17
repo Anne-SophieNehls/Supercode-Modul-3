@@ -20,16 +20,17 @@ export default function Calorie() {
   function calculateCaloriesMale() {
     const calBase = 655.1 + 9.6 * weight + 1.8 * bodySize - 4.7 * age;
     setCalBase(calBase);
+    debugger;
     const calWithActiv = calBase * activity;
     seCalWithActiv(calWithActiv);
   }
 
-  function handleSubmit(e: Event) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!gender) {
       calculateCaloriesMale();
     } else {
-      calculateCaloriesFemale;
+      calculateCaloriesFemale();
     }
   }
 
