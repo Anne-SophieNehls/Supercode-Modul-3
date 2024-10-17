@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../fonts/Urbanist-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Urbanist-Itelic';
+    src: url('../fonts/Urbanist-Italic-VariableFont_wght.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  font-family: 'Urbanist';
+}
+ 
+img{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: fill;
+}
+button{
+    padding: 8px;
+}
+
+/* *************  Fontstyles  ************* */
+h1{}
+h2{}
+h3{
+    padding: 20px;
+    border-bottom: 3px solid #CBEA7B;
+    width: 70%;
+}
+p{}
+ 
+/* *************  Header/Footer  ************* */
+header, footer{
+    background-color: #1A3129;
+    padding: 4% 8%;
+}
+nav {
+    color: white;
+}
+/* *************  Hero  ************* */
+#hero-img{}
+#hero{}
+/* *************  Blog  ************* */
+a{
+    background-color: #F6FBE9;
+}
+/* *************  Calories  ************* */
+#Calorie{}
+form{
+    background-color: #F6FBE9;
+}
+label{}
+input{}
+select{}
+form button{}
+table{}
+tr{}
+td{}
+/* *************  Footer  ************* */
+
+

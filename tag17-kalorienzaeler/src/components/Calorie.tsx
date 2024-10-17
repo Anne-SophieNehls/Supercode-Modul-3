@@ -34,7 +34,7 @@ export default function Calorie() {
   }
 
   return (
-    <section>
+    <section id="Calorie">
       <div>
         <h3>Test your daily Calorie Requirement</h3>
         <p>

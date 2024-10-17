@@ -1,7 +1,11 @@
 export default function Hero() {
   return (
-    <div>
-      <img src="./src/img/hero-img.png" alt="Hero-Image_sporty_woman" />
+    <div id="hero">
+      <img
+        src="./src/img/hero-img.png"
+        alt="Hero-Image_sporty_woman"
+        id="hero-img"
+      />
       <section>
         <h3>Transorm Your 💚 Health with</h3>
         <h1>Personaliued Nutrition Coaching</h1>
