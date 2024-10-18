@@ -1,4 +1,5 @@
 import { useState } from "react";
+import KalorienTracker from "./KalorienTracker";
 
 export default function Calorie() {
   const [bodySize, setBodySize] = useState(0);
@@ -55,7 +56,7 @@ export default function Calorie() {
   return (
     <section id="Calorie">
       <div>
-        <h3>Test your daily Calorie Requirement</h3>
+        <h2>Test your daily Calorie Requirement</h2>
         <p>
           To determine your daily calorie requirement, we need some information
           about your age, gender, weight, height and activity level. Enter this
@@ -137,6 +138,7 @@ export default function Calorie() {
           </tr>
         </table>
       </form>
+      <KalorienTracker calWithActiv={calWithActiv} />
     </section>
   );
 }

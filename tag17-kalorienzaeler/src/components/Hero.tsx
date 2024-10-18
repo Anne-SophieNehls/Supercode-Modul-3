@@ -18,9 +18,9 @@ export default function Hero() {
         </p>
         <div>
           <button id="start-today-btn">Get Starter Today</button>
-          <button id="Book">Book a Demo</button>
+          <button id="book-btn">Book a Demo</button>
         </div>
-        <div>
+        <div id="more-customers">
           <img src="./src/img/Container.png" alt="more Custumers" />
           <p>
             <span>430+ </span>Happy Customers

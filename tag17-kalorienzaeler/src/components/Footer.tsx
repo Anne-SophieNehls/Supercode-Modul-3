@@ -13,7 +13,9 @@ export default function Footer() {
       </nav>
       <div>
         <p>Back to Top</p>
-        <button className="back-to-top">↑</button>
+        <a href="#hero">
+          <button className="back-to-top">↑</button>
+        </a>
       </div>
     </footer>
   ); /* <img src="./src/img/pre-website/Footer Section.png" alt="Footer" />; */
