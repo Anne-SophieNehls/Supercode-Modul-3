@@ -7,7 +7,7 @@ export default function Hero() {
         id="hero-img"
       />
       <section>
-        <h3>Transorm Your 💚 Health with</h3>
+        <h4>Transorm Your 💚 Health with</h4>
         <h1>Personaliued Nutrition Coaching</h1>
         <p>
           Welcome to Nutritionist, your partner in achieving optimal health
@@ -17,15 +17,11 @@ export default function Hero() {
           and experience the power of personalized nutrition coaching.
         </p>
         <div>
-          <button>Get Starter Today</button>
-          <button>Book a Demo</button>
+          <button id="start-today-btn">Get Starter Today</button>
+          <button id="Book">Book a Demo</button>
         </div>
         <div>
-          <div className="more-customers__container">
-            <img src="./src/img/more-people.png" alt="" />
-            <img src="./src/img/more-people2.png" alt="" />
-            <img src="./src/img/more-people3.png" alt="" />
-          </div>
+          <img src="./src/img/Container.png" alt="more Custumers" />
           <p>
             <span>430+ </span>Happy Customers
           </p>

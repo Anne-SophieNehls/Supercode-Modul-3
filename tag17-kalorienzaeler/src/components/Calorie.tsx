@@ -8,20 +8,39 @@ export default function Calorie() {
   const [activity, setActivity] = useState(0);
 
   const [calBase, setCalBase] = useState(0);
-  const [calWithActiv, seCalWithActiv] = useState(0);
+  const [calWithActiv, setCalWithActiv] = useState(0);
+
+  const [kjBase, setkjBase] = useState(0);
+  const [kjWithActiv, setkjWithActiv] = useState(0);
 
   function calculateCaloriesFemale() {
     const calBase = 66.47 + 13.7 * weight + 5 * bodySize - 6.8 * age;
     const calWithActiv = calBase * activity;
-    setCalBase(calBase);
-    seCalWithActiv(calWithActiv);
+    const kjBase = calBase * 4.184;
+    const kjActiv = calWithActiv * 4.184;
+    const roundedkjBase = Number(kjBase.toFixed(2));
+    const roundedkjActiv = Number(kjActiv.toFixed(2));
+    const roundedCalBase = Number(calBase.toFixed(2));
+    const roundedCalWithActiv = Number(calWithActiv.toFixed(2));
+    setCalBase(roundedCalBase);
+    setCalWithActiv(roundedCalWithActiv);
+    setkjBase(roundedkjBase);
+    setkjWithActiv(roundedkjActiv);
   }
 
   function calculateCaloriesMale() {
     const calBase = 655.1 + 9.6 * weight + 1.8 * bodySize - 4.7 * age;
     const calWithActiv = calBase * activity;
-    setCalBase(calBase);
-    seCalWithActiv(calWithActiv);
+    const kjBase = calBase * 4.184;
+    const kjActiv = calWithActiv * 4.184;
+    const roundedkjBase = Number(kjBase.toFixed(2));
+    const roundedkjActiv = Number(kjActiv.toFixed(2));
+    const roundedCalBase = Number(calBase.toFixed(2));
+    const roundedCalWithActiv = Number(calWithActiv.toFixed(2));
+    setCalBase(roundedCalBase);
+    setCalWithActiv(roundedCalWithActiv);
+    setkjBase(roundedkjBase);
+    setkjWithActiv(roundedkjActiv);
   }
 
   function handleSubmit(e: React.FormEvent) {
@@ -109,12 +128,12 @@ export default function Calorie() {
           <tr>
             <td>Basal Metabolic Rate</td>
             <td>{`${calBase}`} kcal</td>
-            <td>{/* baseKj */}</td>
+            <td>{`${kjBase}`}</td>
           </tr>
           <tr>
             <td>Total Daily Energy Expenditure</td>
             <td>{`${calWithActiv}`} kcal</td>
-            <td>{/* expenditureKcal */}</td>
+            <td>{`${kjWithActiv}`}</td>
           </tr>
         </table>
       </form>

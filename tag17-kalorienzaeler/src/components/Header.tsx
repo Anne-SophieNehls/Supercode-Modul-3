@@ -9,7 +9,7 @@ export default function Header() {
         <a href="#">Process</a>
         <a href="#">Pricing</a>
         <a href="#">Blog</a>
-        <button>Contact Us</button>
+        <button id="contact-btn">Contact Us</button>
       </nav>
     </header>
     /* <img src="./src/img/pre-website/Header.png" alt="Header" /> */

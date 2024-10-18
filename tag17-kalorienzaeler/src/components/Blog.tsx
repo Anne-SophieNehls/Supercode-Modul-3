@@ -12,14 +12,17 @@ export default function Blog() {
       <section className="blog-input">
         <a href="#">
           <img src="./src/img/blog1.png" alt="" />
-          <p></p>
-          <h3></h3>
-          <p></p>
-          <section>
+          <p>Weight Loss</p>
+          <h3>The Benefits of Hydration for Weight Loss</h3>
+          <p>
+            Discover how staying hydrated can support your weight loss goals and
+            improve overall health.
+          </p>
+          <section className="blogger">
             <img src="./src/img/blogger1.png" alt="" />
             <article>
-              <p></p>
-              <p></p>
+              <b>Emily Johnson</b>
+              <p>23 May 2023 - 5 min read</p>
             </article>
             <article>
               <button className="fav-btn">♥︎</button>
@@ -29,14 +32,17 @@ export default function Blog() {
         </a>
         <a href="#">
           <img src="./src/img/blog2.png" alt="" />
-          <p></p>
-          <h3></h3>
-          <p></p>
-          <section>
+          <p>Mindful Eating</p>
+          <h3>Cultivating a Healthy Relationship with Food</h3>
+          <p>
+            Learn how practicing mindful eating can help you develop a healthier
+            relationship with food and improve your overall well-being.
+          </p>
+          <section className="blogger">
             <img src="./src/img/blogger2.png" alt="" />
             <article>
-              <p></p>
-              <p></p>
+              <b>Sarah Thompson</b>
+              <p>23 May 2023 - 5 min read</p>
             </article>
             <article>
               <button className="fav-btn">♡</button>

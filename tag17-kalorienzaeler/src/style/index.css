@@ -25,46 +25,120 @@ img{
     background-size: fill;
 }
 button{
-    padding: 8px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    margin: 0px 5px;
 }
 
 /* *************  Fontstyles  ************* */
-h1{}
-h2{}
-h3{
-    padding: 20px;
-    border-bottom: 3px solid #CBEA7B;
-    width: 70%;
+h1{
+    font-size: 3.6rem;
+    margin: 30px 0px;
 }
-p{}
+
+h2{}
+
+h3{}
+
+h4{
+    padding-left: 3px;
+    margin: 30px 0px 15px;
+    font-size: 2.1rem;
+    border-bottom: 3px solid #CBEA7B;
+    width: 56%;
+}
+
+p{
+
+}
  
 /* *************  Header/Footer  ************* */
 header, footer{
     background-color: #1A3129;
-    padding: 4% 8%;
-}
-nav {
+    padding: 3% 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: white;
 }
-/* *************  Hero  ************* */
-#hero-img{}
-#hero{}
-/* *************  Blog  ************* */
-a{
-    background-color: #F6FBE9;
+nav{
+    background-color: #1A3129;
 }
+nav a{
+    color: white;
+    background-color: #1A3129;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 1.4rem;
+
+}
+/* ##### Nur haeder */
+header{
+    position: fixed;
+    width: 100svw;
+}
+#contact-btn{
+    background-color: #CBEA7B;
+    color:#1A3129;
+    font-size: 1.2rem;
+    margin: 0px 30px
+}
+
+/* *************  Hero  ************* */
+#hero{
+    padding-top: 8%;
+    display: flex
+}
+#hero-img{
+    width: 50svw;
+}
+#hero section{
+    padding: 40px;
+}
+/* *************  Blog  ************* */
+.blog a{
+    color: black;
+    text-decoration: none;
+}
+.blog-input{
+    display: flex;
+    color: black;
+}
+
+.blogger{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
 /* *************  Calories  ************* */
-#Calorie{}
+#Calorie{
+    margin: 10%;
+}
 form{
+    padding: 5%;
     background-color: #F6FBE9;
 }
 label{}
 input{}
 select{}
 form button{}
-table{}
-tr{}
-td{}
+table{
+    margin: auto;
+    border: 1px solid #CBEA7B;
+    border-radius: 5px;
+}
+tr{
+    border: 1px solid #CBEA7B;
+    padding: 5px;
+
+
+}
+td{
+    border: 1px solid #CBEA7B;
+    padding: 5px;
+}
 /* *************  Footer  ************* */
 
 
