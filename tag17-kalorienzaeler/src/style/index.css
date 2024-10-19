@@ -168,16 +168,31 @@ span{
 
 /* *************  Blog  ************* */
 .blog{
-    margin: 5% 20%;
+    margin: 5% 8%;
 }
+
+.blog :first-child p{
+    text-align: center;
+    margin: 20px 20%;
+}
+
+
 .blog a{
+    margin: 30px;
     color: black;
     text-decoration: none;
+    width: 40svw;
 }
 .blog-input{
     display: flex;
     color: black;
     width: 80%;
+    padding: 20px;
+}
+.blog-input > img{
+    width: 80%;
+    object-fit: contain
+
 }
 
 .blogger{

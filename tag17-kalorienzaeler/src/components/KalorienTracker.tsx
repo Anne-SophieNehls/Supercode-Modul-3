@@ -38,15 +38,15 @@ export default function KalorienTracker(props: CalorieProps) {
         <div>
           <div>
             <label> What food did you eat?:</label>
-            <input type="text" name="bezeichnung" />
+            <input type="text" name="bezeichnung" ref={foodRef} />
           </div>
           <div>
             <label>how many grams: </label>
-            <input type="number" name="grammzahl" />
+            <input type="number" name="grammzahl" ref={grammRef} />
           </div>
           <div>
             <label>how many calories:</label>
-            <input type="number" name="kalorien" />
+            <input type="number" name="kalorien" ref={kcalRef} />
           </div>
         </div>
         <button id="add-food-btn">Add Food to daily calorie limit</button>
