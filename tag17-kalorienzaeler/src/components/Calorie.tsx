@@ -11,37 +11,21 @@ export default function Calorie() {
   const [calBase, setCalBase] = useState(0);
   const [calWithActiv, setCalWithActiv] = useState(0);
 
-  const [kjBase, setkjBase] = useState(0);
-  const [kjWithActiv, setkjWithActiv] = useState(0);
+  const kjBase = calBase * 4.184;
+  const kjActiv = calWithActiv * 4.184;
 
   function calculateCaloriesFemale() {
     const calBase = 66.47 + 13.7 * weight + 5 * bodySize - 6.8 * age;
     const calWithActiv = calBase * activity;
-    const kjBase = calBase * 4.184;
-    const kjActiv = calWithActiv * 4.184;
-    const roundedkjBase = Number(kjBase.toFixed(2));
-    const roundedkjActiv = Number(kjActiv.toFixed(2));
-    const roundedCalBase = Number(calBase.toFixed(2));
-    const roundedCalWithActiv = Number(calWithActiv.toFixed(2));
-    setCalBase(roundedCalBase);
-    setCalWithActiv(roundedCalWithActiv);
-    setkjBase(roundedkjBase);
-    setkjWithActiv(roundedkjActiv);
+    setCalBase(calBase);
+    setCalWithActiv(calWithActiv);
   }
 
   function calculateCaloriesMale() {
     const calBase = 655.1 + 9.6 * weight + 1.8 * bodySize - 4.7 * age;
     const calWithActiv = calBase * activity;
-    const kjBase = calBase * 4.184;
-    const kjActiv = calWithActiv * 4.184;
-    const roundedkjBase = Number(kjBase.toFixed(2));
-    const roundedkjActiv = Number(kjActiv.toFixed(2));
-    const roundedCalBase = Number(calBase.toFixed(2));
-    const roundedCalWithActiv = Number(calWithActiv.toFixed(2));
-    setCalBase(roundedCalBase);
-    setCalWithActiv(roundedCalWithActiv);
-    setkjBase(roundedkjBase);
-    setkjWithActiv(roundedkjActiv);
+    setCalBase(calBase);
+    setCalWithActiv(calWithActiv);
   }
 
   function handleSubmit(e: React.FormEvent) {
@@ -107,11 +91,8 @@ export default function Calorie() {
             id="Activity"
             onChange={(e) => setActivity(Number(e.target.value))}
           >
-            <option value="1.2">
-              Exclusively sedentary work with little or no physical activity in
-              leisure time
-            </option>
-            <option value="1.35">one or two times per week</option>
+            <option value="1">I don't wonna move anymore</option>
+            <option value="1.25">one or two times per week</option>
             <option value="1.5">three times per week</option>
             <option value="1.7">four times per week</option>
             <option value="1.9">five or six times per week</option>
@@ -128,13 +109,13 @@ export default function Calorie() {
           </tr>
           <tr>
             <td>Basal Metabolic Rate</td>
-            <td>{`${calBase}`} kcal</td>
-            <td>{`${kjBase}`}</td>
+            <td>{calBase.toFixed(2)} kcal</td>
+            <td>{kjBase.toFixed(2)}</td>
           </tr>
           <tr>
             <td>Total Daily Energy Expenditure</td>
-            <td>{`${calWithActiv}`} kcal</td>
-            <td>{`${kjWithActiv}`}</td>
+            <td>{calWithActiv.toFixed(2)} kcal</td>
+            <td>{kjActiv.toFixed(2)}</td>
           </tr>
         </table>
       </form>

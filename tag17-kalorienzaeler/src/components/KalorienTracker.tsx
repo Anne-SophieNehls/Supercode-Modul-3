@@ -14,9 +14,6 @@ export default function KalorienTracker(props: CalorieProps) {
   const [tagesKalorien, setTagesKalorien] = useState(0);
   const [lebensmittel, setLebensmittel] = useState<Lebensmittel[]>([]);
 
-  const aktuelleKcal = props;
-  //setTagesKalorien(aktuelleKcal);
-
   const foodRef = useRef<HTMLInputElement>(null);
   const grammRef = useRef<HTMLInputElement>(null);
   const kcalRef = useRef<HTMLInputElement>(null);
@@ -29,8 +26,9 @@ export default function KalorienTracker(props: CalorieProps) {
       kcal: Number(kcalRef.current?.value),
     };
     setLebensmittel([...lebensmittel, neueLebensmittel]);
-    setTagesKalorien(tagesKalorien - neueLebensmittel.kcal);
+    setTagesKalorien(tagesKalorien + neueLebensmittel.kcal);
   };
+  const total = props.calWithActiv - tagesKalorien;
 
   return (
     <div>
@@ -59,7 +57,7 @@ export default function KalorienTracker(props: CalorieProps) {
               </li>
             ))}
           </ul>
-          <p>left over Calories: {tagesKalorien}kcal</p>
+          <p>left over Calories: {total}kcal</p>
         </div>
       </form>
     </div>

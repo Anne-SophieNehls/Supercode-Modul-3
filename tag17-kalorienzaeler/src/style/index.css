@@ -20,10 +20,9 @@ html{
 }
  
 img{
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: fill;
+    object-fit: cover;
 }
+
 button{
     padding: 15px;
     border-radius: 5px;
@@ -135,26 +134,25 @@ footer div{
 #start-today-btn{
     background-color: #CBEA7B;
     font-size: 1rem;
-    margin: 30px; 
+    margin: 0px 30px; 
     padding: 15px 25px;
 }
 
 #book-btn{
     background-color: #ecf8cd;
     font-size: 1rem;
-    margin: 30px; 
+    margin: 0px 30px; 
     padding: 15px 25px;
 }
 
 #more-customers{
-    margin: 40px;
+    margin: 30px;
     display: flex;
 }
 
 #more-customers img{
     object-fit: contain;
-    margin: 20px;
-    
+    margin: 20px;  
 }
 
 #more-customers p{
