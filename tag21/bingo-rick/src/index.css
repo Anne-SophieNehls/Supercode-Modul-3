@@ -1,0 +1,73 @@
+body {
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.bingo-board {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.bingo-board__cell {
+  min-width: 0;
+  /* width: 100%; */
+  overflow: hidden;
+  position: relative;
+}
+
+.bingo-board__cell--checked::after {
+  content: "x";
+  font-size: 124px;
+  color: white;
+  backdrop-filter: blur(2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(73, 254, 153, 0.7);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bingo-board__image {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bingo-board__success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 80px;
+  transform: rotate(-45deg);
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* .bingo-board__success-overlay::before{
+  content: "";
+  width: 400%;
+  height: 100%;
+  left: -200%;
+  top: 0;
+  position: absolute;
+  background-color: #ff000099;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+} */
